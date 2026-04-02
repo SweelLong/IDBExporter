@@ -1,0 +1,11 @@
+{
+    "export_rename_functions": false,
+    "export_comments": false,
+    "export_data_strings": false,
+    "export_segments": false,
+    "export_structures": false,
+    "export_enums": false,
+    "export_types": false,
+    "export_flags": false,
+    "export_patched_bytes": true
+}
