@@ -6,7 +6,7 @@ An IDAPython script that exports analysis results from an IDA database into a re
 
 ## Use Cases
 
-- **Cross-version IDB migration**: Migrate analysis data between different versions of IDA Pro's `.i64` files (e.g., IDA 7.x → IDA 8.x, IDA 8.x → IDA 9.x). When IDA Pro updates its database format, you can open the old `.i64` file in the old version, export the analysis, and apply it to a fresh database in the new version.
+- **Cross-version IDB migration**: Migrate analysis data between different versions of IDA Pro's `.i64` files. When IDA Pro updates its database format, you can open the old `.i64` file in the old version, export the analysis, and apply it to a fresh database in the new version.
 - **Quick patched bytes extraction**: Export only `export_patched_bytes` to quickly extract all patched bytes from an IDB for local tool development, binary diffing, or patch documentation.
 - **Merge patches from multiple sessions**: When multiple analysts work on the same binary in separate `.i64` files (each patching different regions), you can export `export_patched_bytes` from each and combine the generated scripts to merge all patches into a single binary.
 - **Analysis backup and sharing**: Save your reverse engineering progress as a portable script that can be shared with teammates or reapplied after database corruption.
@@ -52,7 +52,7 @@ Set any value to `false` to disable the corresponding export feature.
 
 ### 1. Export Analysis Data
 
-1. Open IDA Pro and load the `.idb` or `.i64` file you want to export from
+1. Open IDA Pro and load the `.i64` file you want to export from
 2. Click **File → Script file...** (shortcut `Shift + F2`)
 3. In the file selection dialog, find and select `IDBExporter.py`
 4. The script will run automatically and generate `<original_name>_exported.py` in the same directory as the input file
@@ -66,7 +66,7 @@ Set any value to `false` to disable the corresponding export feature.
 
 ## Test Environment
 
-- IDA Pro 9.2+
+- IDA Pro 9.2
 - IDAPython (built into IDA)
 - Python 3.9.6
 
